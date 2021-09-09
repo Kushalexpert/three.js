@@ -1,446 +1,52 @@
-<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title>CodePen - particles text three.js</title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.84">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #0000ee; -webkit-text-stroke: #0000ee}
-    span.s1 {font-kerning: none}
-    span.s2 {text-decoration: underline ; font-kerning: none; color: #0000ee; -webkit-text-stroke: 0px #0000ee}
-    span.s3 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
-    td.td1 {width: 97.9px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
-    td.td2 {width: 574.2px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
-  </style>
-</head>
-<body>
-<table cellspacing="0" cellpadding="0">
-  <tbody>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;html lang="en" &gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;head&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;title&gt;CodePen - particles text three.js &lt;/title&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;link rel="stylesheet" href="<a href="applewebdata://6A7DB639-D5D7-4F99-8265-F4F338FD3D54/style.css"><span class="s2">./style.css</span></a>"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;body&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;!-- partial:index.partial.html --&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;script type="x-shader/x-vertex" id="vertexshader"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">attribute float size;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">attribute vec3 customColor;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">varying vec3 vColor;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">void main() {</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">vColor = customColor;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">gl_PointSize = size * ( 300.0 / -mvPosition.z );</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">gl_Position = projectionMatrix * mvPosition;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;script type="x-shader/x-fragment" id="fragmentshader"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">uniform vec3 color;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">uniform sampler2D pointTexture;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">varying vec3 vColor;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">void main() {</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">gl_FragColor = vec4( color * vColor, 1.0 );</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">}</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/script&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;div id="magic"&gt;&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;div class="playground"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;div class="bottomPosition"&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;a href="" target="_blank"&gt;#&lt;/a&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;h1 class="special"&gt;Kushal Expert &lt;br&gt;&lt;span class="minText"&gt;Creative developer &amp; Graphic designer.&lt;/span&gt;&lt;/h1&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/div&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;!-- partial --&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p3"><span class="s3">&lt;script src='<a href="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"><span class="s2">https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js</span></a>'&gt;&lt;/script&gt;&lt;script src="<a href="applewebdata://6A7DB639-D5D7-4F99-8265-F4F338FD3D54/script.js"><span class="s2">./script.js</span></a>"&gt;&lt;/script&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-      </td>
-    </tr>
-    <tr>
-      <td valign="middle" class="td1">
-        <p class="p2"><span class="s1"></span><br></p>
-      </td>
-      <td valign="middle" class="td2">
-        <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</body>
 
+
+<meta charset="UTF-8">
+
+<title>Mr Expert</title>
+
+<link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<script type="x-shader/x-vertex" id="vertexshader">
+
+  attribute float size;
+  attribute vec3 customColor;
+  varying vec3 vColor;
+
+  void main() {
+
+    vColor = customColor;
+    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+    gl_PointSize = size * ( 300.0 / -mvPosition.z );
+    gl_Position = projectionMatrix * mvPosition;
+
+  }
+
+</script>
+<script type="x-shader/x-fragment" id="fragmentshader">
+
+ uniform vec3 color;
+ uniform sampler2D pointTexture;
+
+ varying vec3 vColor;
+
+ void main() {
+
+   gl_FragColor = vec4( color * vColor, 1.0 );
+   gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+ }
+</script>
+
+<div id="magic"></div>
+<div class="playground">
+  <div class="bottomPosition">
+     <a href="" target="_blank">#</a>
+        <h1 class="special">Kushal Expert <br><span class="minText">Creative developer & Graphic designer.</span></h1>
+  </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js'></script><script src="./script.js"></script>
